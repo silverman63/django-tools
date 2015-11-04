@@ -20,7 +20,7 @@ def start_grunt(command, task=None):
     # start cli display
     command.stdout.write('>>> Starting grunt')
     command.grunt_process = subprocess.Popen(
-        grunt_command,
+        grunt_command, # <- uses the commands as list
         shell=True,
         stdin=subprocess.PIPE,
         stdout=command.stdout,
